@@ -15,7 +15,7 @@ var kwiz = require('./kwiz_module/kwiz_module');
 
 //create the server and the socketsio
 var server = require('http').createServer(app);
-var io = require('socket.io').listen(server);
+var io = require('socket.io')(server);
 
 //server static file in the public directory
 app.use(express.static('public'))

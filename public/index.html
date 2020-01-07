@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kwizzz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Styles and Scripts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Kwizzz</h1>
+        <p>Interactive and Multi-User Quizz.</p>
+    </div>
+    <!-- Main content. WARNING, DO NOT ADD ELEMENT IN THERE IT WILL BE DELETED -->
+    <div id="content" class="row"></div>
+
+</div>
+
+
+<footer id="site-footer" class="contain well">
+    <span class="col-xs-6 pull-right text-right">Copyright &copy;KWIZZZ 2019</span>
+</footer>
+
+<!-- Socket.io scripts (from node module)-->
+<script src="/socket.io/socket.io.js"></script>
+<!-- Custom Styles and Scripts -->
+<link rel="stylesheet" href="stylesheets/style.css">
+<script src="scripts/kwiz.js"></script>
+
+<script language="javascript">
+    //once the page is load, call kwiz.start() 
+    window.onload = function (e) {
+        kwiz.start();
+    }
+</script>
+
+</body>
+</html>

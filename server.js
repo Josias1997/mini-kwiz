@@ -28,6 +28,6 @@ io.on('connection', function (socket) {
     socket.emit("quiz", kwiz.questions());
 });
 
-server.listen(process.env.PORT || 8080, () => {
-	console.log("Server is running");
+server.listen(8080, () => {
+	console.log("Server is running on port 8080");
 });
